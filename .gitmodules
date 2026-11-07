@@ -1,3 +1,3 @@
-[submodule "siger"]
-	path = siger
+[submodule "Siger"]
+	path = Siger
 	url = https://github.com/VasuRastogi-BrainWheels/Siger.git
