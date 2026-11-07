@@ -1,0 +1,129 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formula Dash</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+	<style>
+    @media(max-width: 1023px){
+body {
+  touch-action: none;
+    background-color: black;
+    cursor: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars during rotation */
+}	
+		canvas { 
+            position: absolute;
+            width:100vh;
+            height:100vw;
+            border: none; 
+            transform: rotate(90deg);
+        		top: 23.4%;
+        		left: -44.5%;
+        		background: transparent;
+        		
+           }
+
+    #ui{                     
+        filter: brightness(1) contrast(1);
+        max-height: 710px;    
+        top: 23.4%;
+        left: -44.5%;
+        border:12px solid black;
+           
+           }
+    #background {
+      z-index: -1;
+    }
+    #map{
+      border:4px solid red;
+      position: absolute;
+      left:2%;
+      top:75%;
+      width:1px;
+      height:1px;
+      
+
+    }
+    speed{
+      position: absolute;
+      top:82%;
+      left:30%;
+      font-size:30px;
+      color:orange;
+      font-weight: bolder;
+      transform: rotate(90deg);
+    }
+    fps{
+      position: absolute;
+      top:8%;
+      left:80%;
+      
+      font-size:30px;
+      color:white;
+      transform: rotate(90deg);
+    }
+}
+@media(min-width: 400px)  {
+    body {
+    touch-action: none;
+    background-color: black;
+    cursor: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    overflow: hidden; /* Prevents scrollbars during rotation */
+} 
+    canvas{background: transparent;}
+
+    #background {
+      z-index: -2;
+      position: absolute;
+      filter:brightness(1.0);
+      top:0%;
+      left:0%;
+      height:100%;
+      width:100%;
+    }
+    #map{
+      border:4px solid red;
+      position: absolute;
+      left:2%;
+      top:75%;
+      
+
+    }
+    speed{
+      position: absolute;
+      top:4%;
+      left:80%;
+      font-size:40px;
+      color:white;
+    }
+    fps{
+      position: absolute;
+      top:4%;
+      left:4%;
+      font-size:60px;
+      color:white;
+    }
+}
+	</style>
+</head>
+<body>
+
+	<div id="renderer"></div>
+	<canvas id="background"></canvas>
+	<canvas stye="z-index:122 ;"id="ui"></canvas>
+
+  <canvas id='map'></canvas>
+  <fps>0</fps>
+  <speed>0.00m/s</speed>
+	<script type="module" src="main.js"></script>
+	<script type="module"  src="GameCtrl.js"></script>
+</body>
+</html>
